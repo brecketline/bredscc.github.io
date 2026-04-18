@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Read the World</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="corner-bracket tl" aria-hidden="true"></div>
+  <div class="corner-bracket tr" aria-hidden="true"></div>
+  <div class="corner-bracket bl" aria-hidden="true"></div>
+  <div class="corner-bracket br" aria-hidden="true"></div>
+
+  <div class="background-globe" id="globe-container" aria-hidden="true"></div>
+
+  <div class="app-shell" id="app">
+
+    <header class="topbar" role="banner">
+      <div class="brand">
+        <div class="brand-sigil" aria-hidden="true">
+        </div>
+        <div class="brand-text">
+          <div class="brand-tag">brecketlab</div>
+          <h1 class="title">READ<span class="title-accent">THE</span>WORLD</h1>
+          <p class="subtitle">&gt; BOOKS WITHOUT BORDERS_</p>
+        </div>
+      </div>
+
+      <nav class="tab-nav" role="tablist" aria-label="Sections">
+        <button class="tab-btn active" role="tab" aria-selected="true" data-tab="globe" id="tab-globe">
+          <span class="material-icons" aria-hidden="true">travel_explore</span>
+          <span>GLOBE PICKER</span>
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="philosophy" id="tab-philosophy">
+          <span class="material-icons" aria-hidden="true">philosophy</span>
+          <span>PHILOSOPHY</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="content" role="main">
+
+      <section class="tab-panel active" id="panel-globe" role="tabpanel" aria-labelledby="tab-globe">
+        <div class="panel-header">
+          <div class="panel-label">
+            <span class="label-dot"></span>
+            RANDOM COUNTRY SELECTOR
+            <span class="label-dot"></span>
+          </div>
+          <p class="panel-desc">Spin the globe. Let chance guide your next read.</p>
+        </div>
+
+       <div class="globe-action-row">
+          <button id="pickBtn" class="btn primary" aria-label="Spin the globe to pick a country" type="button">
+            <span class="btn-bg" aria-hidden="true"></span>
+            <span class="btn-content">
+              <span class="material-icons btn-icon" aria-hidden="true">travel_explore</span>
+              <span class="btn-label">SPIN THE GLOBE</span>
+            </span>
+            <span class="btn-corner tl" aria-hidden="true"></span>
+            <span class="btn-corner tr" aria-hidden="true"></span>
+            <span class="btn-corner bl" aria-hidden="true"></span>
+            <span class="btn-corner br" aria-hidden="true"></span>
+          </button>
+
+          <div class="status-bar" aria-live="polite">
+            <span class="status-indicator" id="statusIndicator">READY</span>
+            <span class="status-coords" id="statusCoords">LAT:---.-- LON:---.--</span>
+          </div>
+        </div>
+
+        <section id="result" class="result" aria-live="polite" aria-atomic="true"></section>
+      </section>
+
+      <section class="tab-panel" id="panel-philosophy" role="tabpanel" aria-labelledby="tab-philosophy" hidden>
+        <div class="panel-header">
+          <div class="panel-label">
+            <span class="label-dot"></span>
+            INTERNATIONAL PHILOSOPHY ARCHIVE
+            <span class="label-dot"></span>
+          </div>
+          <p class="panel-desc">Philosophy Across Borders: Timeless Classics & Modern Voices</p>
+        </div>
+
+        <div class="philosophy-controls">
+          <div class="search-wrapper">
+            <span class="material-icons search-icon" aria-hidden="true">search</span>
+            <input type="text" id="philoSearch" class="search-input" placeholder="Search philosopher or country..." aria-label="Search philosophy books" />
+            <span class="search-cursor" aria-hidden="true">_</span>
+          </div>
+          <div class="filter-chips" id="regionFilter" role="group" aria-label="Filter by region">
+            <button class="chip active" data-region="all">ALL</button>
+            <button class="chip" data-region="Europe">EUROPE</button>
+            <button class="chip" data-region="Asia">ASIA</button>
+            <button class="chip" data-region="Americas">AMERICAS</button>
+            <button class="chip" data-region="Africa">AFRICA</button>
+            <button class="chip" data-region="Middle East">MIDDLE EAST</button>
+          </div>
+        </div>
+
+        <div class="philo-grid" id="philoGrid" aria-label="Philosophy books by country">
+        </div>
+
+        <div class="philo-empty" id="philoEmpty" hidden aria-live="polite">
+          <span class="material-icons">search_off</span>
+          <p>NO RESULTS FOUND_</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <span class="footer-text">READ_THE_WORLD // ALL_REGIONS_ACCESSIBLE</span>
+      <span class="footer-blink" aria-hidden="true">■</span>
+    </footer>
+  </div>
+
+  <script src="app.js" defer></script>
+  <script src="three-globe.js" defer></script>
+  <script src="philosophy.js" defer></script>
+  <audio id="ui-sound" src="u_jww7bj79ux-binary-code-interface-sound-effects-sci-fi-computer-ui-sounds-209403.mp3" preload="auto"></audio>
+</body>
+</html>
+
+
+
