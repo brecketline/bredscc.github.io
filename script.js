@@ -12,8 +12,7 @@ const translations = {
         heroTagline: "Software Engineering Student | Python Focused",
         schenginTitle: "Scheng.in (Upcoming)",
         schenginDesc: "Exploring the Schengen Area? Keep your trip stress-free. Scheng.in is a website that tracks your days and intelligently recommends how to avoid overstaying your visa.",
-        synsysTitle: 'SYNSYS - Text Analyzer (API)',
-        synsysDesc: 'A Production-Ready Full Stack project built with Python Flask/spaCy (Backend) and JavaScript (Frontend). It identifies repeated words through lemmatization and suggests richer vocabulary.'
+        
     },
     'pt': {
         home: "Início",
@@ -28,8 +27,7 @@ const translations = {
         heroTagline: "Estudante de Engenharia de Software | Foco em Python",
         schenginTitle: "Scheng.in (Em Breve)",
         schenginDesc: "Explorando a Área Schengen? Mantenha sua viagem tranquila. Scheng.in é um site que rastreia seus dias e recomenda inteligentemente como evitar ultrapassar o visto.",
-        synsysTitle: 'SYNSYS - Analisador de Texto (API)',
-        synsysDesc: 'Um projeto Full Stack pronto para produção, construído com Python Flask/spaCy (backend) e JavaScript (frontend). Ele identifica palavras repetidas através da Lematização e sugere vocabulário mais rico.'
+        
     },
     'es': {
         home: "Inicio",
@@ -44,8 +42,7 @@ const translations = {
         heroTagline: "Estudiante de Ingeniería de Software | Enfoque en Python",
         schenginTitle: "Scheng.in (Próximamente)",
         schenginDesc: "Explorando el Área Schengen? Mantén tu viaje libre de estrés. Scheng.in rastrea tus días y recomienda cómo evitar exceder tu visa.",
-        synsysTitle: 'SYNSYS - Analizador de Texto (API)',
-        synsysDesc: 'Un proyecto Full Stack listo para producción, construido con Python Flask/spaCy (backend) y JavaScript (frontend). Identifica palabras repetidas mediante lematización y sugiere un vocabulario más rico.'
+        
     },
     'fr': {
         home: "Accueil",
@@ -60,8 +57,7 @@ const translations = {
         heroTagline: "Étudiante en ingénierie logicielle | Axée sur Python",
         schenginTitle: "Scheng.in (À venir)",
         schenginDesc: "Vous explorez l'espace Schengen ? Gardez votre voyage sans stress. Scheng.in suit vos jours et recommande comment éviter de dépasser votre visa.",
-        synsysTitle: 'SYNSYS - Analyseur de Texte (API)',
-        synsysDesc: 'Un projet Full Stack prêt pour la production, construit avec Python Flask/spaCy (backend) et JavaScript (frontend). Il identifie les mots répétés par la lemmatisation et suggère un vocabulaire plus riche.'
+
     }
 };
 
