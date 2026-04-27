@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Brenda Cabral Chaves — Software Engineering Student. Portfolio and projects." />
+<title>Brenda Cabral Chaves | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="assets/logo_brecketline.webp" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<canvas id="network-canvas" aria-hidden="true"></canvas>
+
+<header>
+<nav role="navigation" aria-label="Main navigation" class="nav">
+<div class="nav-inner">
+<div class="logo">
+  <a href="#home" aria-label="Home">
+    <img src="assets/logo_brecketline.webp" alt="Brecketline Logo" loading="lazy" />
+  </a>
+</div>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+<label for="nav-toggle" class="nav-toggle-btn" aria-label="Toggle navigation">
+  <span class="hamburger" aria-hidden="true"></span>
+</label>
+
+<ul class="nav-links">
+  <li><a href="#home" data-key="home">Home</a></li>
+  <li><a href="#projects" data-key="projects">Projects</a></li>
+  <li><a href="#certificates" data-key="certificates">Certificates</a></li>
+  <li><a href="#about" data-key="about">About me</a></li>
+  <li><a href="mailto:brecketline@gmail.com" data-key="contact">Contact</a></li>
+</ul>
+
+<div class="nav-controls">
+  <select id="language-selector" aria-label="Choose language">
+    <option value="en">EN</option>
+    <option value="pt">PT</option>
+    <option value="es">ES</option>
+    <option value="fr">FR</option>
+  </select>
+</div>
+</div>
+</nav>
+</header>
+
+<main id="main">
+
+<section class="hero" id="home" aria-labelledby="hero-title">
+  <div class="hero-content">
+    <h1 id="hero-title" data-key="heroTitle">Brenda Cabral Chaves</h1>
+    <p class="hero-sub" data-key="heroTagline">Software Engineering Student | Python Focused</p>
+   
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary" data-key="projects">Projects</a>
+      <a href="#about" class="btn-ghost" data-key="about">About me</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint" aria-hidden="true"><span></span></div>
+</section>
+
+<section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+  <div class="container">
+    <h2 id="projects-heading" class="section-title" data-key="projects">Projects</h2>
+    <div class="projects-grid">
+
+      <a href="https://brecketline.me/read-the-world" class="project-card" target="_blank" rel="noopener noreferrer">
+        <div class="card-tag">Live</div>
+        <div class="card-tech"><span>Python</span><span>API</span></div>
+        <h3 data-key="projectsTitle">Read The World</h3>
+        <p data-key="projectsDesc">A simple tool that selects a random country in the world and then finds a book written by an author from that country. The goal is to learn about a place through its literature.</p>
+        <span class="card-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="https://github.com/brecketline/brasil_publico" class="project-card" target="_blank" rel="noopener noreferrer">
+        <div class="card-tag card-tag--wip" data-key="tagWip">In Progress</div>
+        <div class="card-tech"><span>Python</span><span>Pandas</span><span>Data</span></div>
+        <h3 data-key="brasilPublicoTitle">Brasil Público</h3>
+        <p data-key="brasilPublicoDesc">An independent project to apply what I learn about Python data libraries. Explores public Brazilian datasets to extract insights and practice data analysis techniques.</p>
+        <span class="card-arrow" aria-hidden="true">→</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="about section" id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-image-wrap">
+        <div class="about-image-frame">
+          <img src="assets/brenda-profile.jpg" alt="Brenda Cabral Chaves" class="about-photo" loading="lazy" />
+        </div>
+        <div class="languages-card">
+          <h4 data-key="langCardTitle">Languages</h4>
+          <ul class="lang-list">
+            <li><span class="lang-name" data-key="langPT">Portuguese</span><span class="lang-level lang-native" data-key="langPTLevel">Native</span></li>
+            <li><span class="lang-name" data-key="langEN">English</span><span class="lang-level lang-fluent" data-key="langENLevel">Fluent</span></li>
+            <li><span class="lang-name" data-key="langES">Spanish</span><span class="lang-level lang-fluent" data-key="langESLevel">Fluent</span></li>
+            <li><span class="lang-name" data-key="langFR">French</span><span class="lang-level lang-intermediate" data-key="langFRLevel">Intermediate</span></li>
+          </ul>
+          <p class="lang-note" data-key="langNote">Professional experience in all four languages</p>
+        </div>
+      </div>
+      <div class="about-text">
+        <h2 id="about-heading" data-key="aboutTitle">About</h2>
+        <p data-key="aboutText">I'm a software engineering student with a background in customer service and tourism, where I learned to solve problems quickly, adapt to new environments, and work seamlessly with diverse teams. In 2023, I shifted my focus to technology, studying Python and building my foundation in JavaScript, HTML, and CSS. Today, I'm channeling those skills into software projects that emphasize simplicity, creativity, and reliable solutions. Fluent in four languages and with experience living and working across five countries, I bring a global perspective to my work and the ability to learn and adapt at speed. Whether as part of a trainee team or through collaboration, my goal is to create efficient solutions without sacrificing quality and to keep growing as a developer who delivers results you can trust.</p>
+
+        <div class="about-subsection">
+          <h3 class="about-sub-heading" data-key="skillsTitle">Skills</h3>
+          <div class="about-tags">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Matplotlib</span>
+            <span>Numpy</span>
+            <span>JavaScript</span>
+            <span>HTML &amp; CSS</span>
+            <span>Git</span>
+          </div>
+        </div>
+
+        <div class="about-subsection">
+          <h3 class="about-sub-heading" data-key="interestsTitle">Interests</h3>
+          <div class="about-tags about-tags--interests">
+            <span data-key="interestData">Data Analysis</span>
+            <span data-key="interestMath">Mathematics</span>
+            <span data-key="interestLit">Literature</span>
+            <span data-key="interestTravel">Travel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+<div class="container footer-inner">
+  <p>&copy; 2025 brecketline</p>
+  <div class="socials">
+    <a href="https://github.com/brecketline" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="icon github-icon" />
+    </a>
+    <a href="mailto:brecketline@gmail.com" aria-label="Email">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Email" class="icon" />
+    </a>
+  </div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
